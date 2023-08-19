@@ -1,2 +1,19 @@
 $main: #cd5ff8;
 $white: #fff;
+$dark: #181a27;
+
+@mixin laptop {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 450px) {
+    @content;
+  }
+}

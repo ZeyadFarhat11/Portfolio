@@ -1,0 +1,33 @@
+@import "../../assets/style/components.scss";
+footer.footer {
+  background-color: #0a0416;
+  color: #fff;
+  font-weight: 500;
+  padding: 15px 0;
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    @include tablet {
+      grid-template-columns: 1fr;
+      gap: 10px;
+      text-align: center;
+      .social {
+        justify-content: center;
+      }
+    }
+  }
+  p {
+    margin: 0;
+  }
+  p:nth-child(2) {
+    text-align: center;
+  }
+  .social {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    a {
+      color: #fff;
+    }
+  }
+}
