@@ -6,6 +6,8 @@ import Header from "./components/Header/Header";
 import "./assets/style/style.scss";
 import StarCanvas from "./components/StarCanvas/StarCanvas";
 import Footer from "./components/Footer/Footer";
+import Projects from "./pages/Projects/Projects";
+import Resume from "./pages/Resume/Resume";
 export default function App() {
   return (
     <>
@@ -14,6 +16,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/resume" element={<Resume />} />
       </Routes>
       <Footer />
     </>

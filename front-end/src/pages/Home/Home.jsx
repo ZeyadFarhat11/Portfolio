@@ -1,7 +1,7 @@
 import { TypeAnimation } from "react-type-animation";
 import "./home.scss";
 import landingImg from "../../assets/img/landing.svg";
-import data from "../../data.json";
+import data from "../../data.jsx";
 import { Tilt } from "react-tilt";
 import avatar from "../../assets/img/home-avatar.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,11 +14,11 @@ import {
 import { Container } from "react-bootstrap";
 export default function Home() {
   return (
-    <>
+    <main id="home">
       <LandingSection />
       <IntroduceSection />
       <SocialSection />
-    </>
+    </main>
   );
 }
 
@@ -67,12 +67,27 @@ function IntroduceSection() {
     <section className="introduce">
       <Container>
         <div className="text">
-          <h2>
-            let me <span className="main-color">introduce</span> myself
+          <h2 className="main-title">
+            let me <span>introduce</span> myself
           </h2>
-          {data.homeIntroduceParagraphs.map((p, i) => (
-            <p dangerouslySetInnerHTML={{ __html: p }} key={i}></p>
-          ))}
+          <p className="main-paragraph">
+            I fell in love with programming and I have at least learnt
+            something, I think… 🤷‍♂️
+          </p>
+          <p className="main-paragraph">
+            I am fluent in classics like <span>C++, Javascript and Go.</span>
+          </p>
+          <p className="main-paragraph">
+            My field of Interest's are building new{" "}
+            <span>Web Technologies and Products</span> and also in areas related
+            to <span>Blockchain</span>.
+          </p>
+          <p className="main-paragraph">
+            Whenever possible, I also apply my passion for developing products
+            with <span>Node.js</span> and{" "}
+            <span>Modern Javascript Library and Frameworks</span> like{" "}
+            <span>React.js</span> and <span>Next.js</span>
+          </p>
         </div>
         <div className="img">
           <Tilt options={{ scale: 1, max: 20 }}>

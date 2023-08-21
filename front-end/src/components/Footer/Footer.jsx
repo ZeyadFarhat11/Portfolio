@@ -1,5 +1,5 @@
 import "./footer.scss";
-import data from "../../data.json";
+import data from "../../data.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,

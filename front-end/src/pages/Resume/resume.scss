@@ -1,0 +1,26 @@
+main#resume {
+  color: #fff;
+  .container {
+    padding: 0 100px;
+  }
+  .react-pdf__Page__canvas {
+    margin: 0 auto;
+    width: 90% !important;
+    height: 100% !important;
+  }
+  .react-pdf__Page__textContent.textLayer,
+  .react-pdf__Page__annotations.annotationLayer {
+    display: none;
+  }
+
+  a {
+    display: block;
+    width: fit-content;
+    margin: 50px auto;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #6d20c5d7;
+  }
+}

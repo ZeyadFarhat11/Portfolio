@@ -1,0 +1,100 @@
+@import "../../assets/style/components.scss";
+main#about {
+  .landing {
+    .container {
+      height: calc(100vh - 60px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .text {
+      color: #fff;
+    }
+    .activities {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        padding-top: 10px;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+
+    @include tablet {
+      .container {
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+        .text {
+          li {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  .skillset {
+    h2 {
+      text-transform: none;
+      margin-bottom: 20px;
+    }
+    .skills-grid,
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      justify-content: center;
+      // margin-bottom: 50px;
+      .skill,
+      .tool {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 10px;
+        border: 1.7px solid rgba(200, 137, 230, 0.637);
+        box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137);
+        border-radius: 5px;
+        transform: scale(1);
+        transition: 600ms;
+        &:hover {
+          transform: scale(1.035);
+          border-width: 2px;
+        }
+        svg {
+          color: #fff;
+          font-size: 70px;
+        }
+      }
+    }
+    .tools-grid {
+      grid-template-columns: 1fr 1fr 1fr;
+      @include laptop {
+        grid-template-columns: 1fr 1fr;
+      }
+      @include tablet {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  section.code-days {
+    margin-top: 50px;
+    color: #fff;
+    h2 {
+      text-transform: none;
+      margin-bottom: 20px;
+    }
+    article {
+      margin: 0 auto;
+      max-width: 100% !important;
+      width: 1000px !important;
+      > svg {
+        width: 100% !important;
+      }
+    }
+  }
+}

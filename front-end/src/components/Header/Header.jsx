@@ -11,7 +11,7 @@ import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./header.scss";
 import { useEffect, useState } from "react";
-import data from "../../data.json";
+import data from "../../data.jsx";
 import { useLocation } from "react-router-dom";
 
 function Header() {
@@ -21,6 +21,7 @@ function Header() {
 
   useEffect(() => {
     setMenuActive(false);
+    window.scrollTo(0, 0);
   }, [location]);
 
   return (
