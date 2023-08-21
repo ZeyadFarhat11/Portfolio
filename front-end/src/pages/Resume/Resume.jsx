@@ -9,7 +9,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 export default function Resume() {
   return (
     <main id="resume">
-      <a href={resume} className="main-button">
+      <a href={resume} target="_blank" className="main-button">
         <FontAwesomeIcon icon={faDownload} />
         Download Resume
       </a>
@@ -22,7 +22,7 @@ export default function Resume() {
           <Page pageNumber={2} scale={window.innerWidth > 786 ? 1.7 : 0.6} />
         </Document>
       </Container>
-      <a href={resume} className="main-button">
+      <a href={resume} target="_blank" className="main-button">
         <FontAwesomeIcon icon={faDownload} />
         Download Resume
       </a>

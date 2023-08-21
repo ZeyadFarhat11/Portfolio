@@ -12,10 +12,11 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import chatify from "./assets/img/projects/chatify.png";
 import bitsOfCode from "./assets/img/projects/bits-of-code.png";
+import project1 from "./assets/img/projects/chatify.png";
 
 export default {
   social: {
-    github: "https://google.com",
+    github: "https://github.com/mahmoud-oraby",
     twitter: "https://google.com",
     linkedIn: "https://google.com",
     instagram: "https://google.com",

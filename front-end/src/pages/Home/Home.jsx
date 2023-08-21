@@ -108,16 +108,16 @@ function SocialSection() {
           Feel free to <span className="main-color">connect</span> with me
         </p>
         <div className="platforms">
-          <a href={data.social.github}>
+          <a href={data.social.github} target="_blank">
             <FontAwesomeIcon icon={faGithub} color="#222" />
           </a>
-          <a href={data.social.twitter}>
+          <a href={data.social.twitter} target="_blank">
             <FontAwesomeIcon icon={faTwitter} color="#1DA1F2" />
           </a>
-          <a href={data.social.linkedIn}>
+          <a href={data.social.linkedIn} target="_blank">
             <FontAwesomeIcon icon={faLinkedin} color="#0A66C2" />
           </a>
-          <a href={data.social.instagram}>
+          <a href={data.social.instagram} target="_blank">
             <FontAwesomeIcon icon={faInstagram} color="#C13584" />
           </a>
         </div>

@@ -47,7 +47,7 @@ function Header() {
               <span>Resume</span>
             </Link>
           </nav>
-          <a href={data.repoUrl} className="repo-button">
+          <a href={data.repoUrl} target="_blank" className="repo-button">
             <FontAwesomeIcon icon={faCodeFork} />
             <FontAwesomeIcon icon={faStar} />
           </a>
