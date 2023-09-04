@@ -29,11 +29,10 @@ function LandingSection() {
           </h2>
           <p className="main-paragraph">
             Hi Everyone, I am
-            <span className="main-color"> Soumyajit Behera</span> from
-            <span className="main-color"> Bhubaneswar, India</span>. I am a
-            final year student pursuing an Integrated MSc (IMSc) in Maths and
-            Computing at BIT Mesra. Additionally, I am currently employed as a
-            software developer at Juspay.
+            <span className="main-color"> Zeyad Farhat</span> from
+            <span className="main-color"> Damitta, Egypt</span>. I am a student
+            in the final year of high school. Additionally, I am currently
+            working as freelancer.
           </p>
           <p className="main-paragraph">
             Apart from coding, some other activities that I love to do!
@@ -43,7 +42,7 @@ function LandingSection() {
               <FontAwesomeIcon icon={faHandPointRight} /> Playing Games
             </li>
             <li>
-              <FontAwesomeIcon icon={faHandPointRight} /> Writing Tech Blogs
+              <FontAwesomeIcon icon={faHandPointRight} /> Reading Books
             </li>
             <li>
               <FontAwesomeIcon icon={faHandPointRight} /> Travelling
@@ -126,7 +125,7 @@ function CodeDaysSection() {
       </h2>
       <Container>
         <GitHubCalendar
-          username="mahmoud-oraby"
+          username="ZeyadFarhat11"
           blockSize={15}
           blockMargin={5}
           fontSize={16}

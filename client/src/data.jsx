@@ -1,13 +1,19 @@
-import django from "./assets/img/skills/django.svg";
+import mongodb from "./assets/img/skills/mongodb.svg";
 import postgres from "./assets/img/skills/postgres.svg";
 import postman from "./assets/img/skills/postman.svg";
 import vsc from "./assets/img/skills/vsc.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCss3,
+  faFigma,
   faGitAlt,
   faHtml5,
+  faJsSquare,
+  faNode,
+  faNodeJs,
   faPython,
+  faReact,
+  faSass,
   faWindows,
 } from "@fortawesome/free-brands-svg-icons";
 import chatify from "./assets/img/projects/chatify.png";
@@ -21,31 +27,14 @@ export default {
     linkedIn: "https://google.com",
     instagram: "https://google.com",
   },
-  copyrightMessages: ["Developed by Zeyad Farhat", "Copyright © 2023 MO"],
+  copyrightMessages: [
+    "Developed by Zeyad Farhat",
+    "Copyright © 2023 Zeyad Farhat",
+  ],
   repoUrl: "https://google.com",
 };
 
 export const skills = [
-  {
-    icon: <FontAwesomeIcon icon={faPython} />,
-    title: "python",
-  },
-  {
-    icon: django,
-    title: "django",
-    type: "img",
-    style: { height: "50px" },
-  },
-  {
-    icon: postgres,
-    title: "postgres",
-    type: "img",
-    style: { height: "70px" },
-  },
-  {
-    icon: <FontAwesomeIcon icon={faGitAlt} />,
-    title: "git",
-  },
   {
     icon: <FontAwesomeIcon icon={faHtml5} />,
     title: "html5",
@@ -53,6 +42,32 @@ export const skills = [
   {
     icon: <FontAwesomeIcon icon={faCss3} />,
     title: "css3",
+  },
+  {
+    icon: <FontAwesomeIcon icon={faSass} />,
+    title: "sass",
+  },
+  {
+    icon: <FontAwesomeIcon icon={faJsSquare} />,
+    title: "javascript",
+  },
+  {
+    icon: <FontAwesomeIcon icon={faReact} />,
+    title: "react",
+  },
+  {
+    icon: <FontAwesomeIcon icon={faNode} />,
+    title: "nodejs",
+  },
+  {
+    icon: mongodb,
+    title: "mongodb",
+    type: "img",
+    style: { height: "70px" },
+  },
+  {
+    icon: <FontAwesomeIcon icon={faGitAlt} />,
+    title: "git",
   },
 ];
 
@@ -72,6 +87,10 @@ export const tools = [
     title: "postman",
     type: "img",
     style: { height: "65px" },
+  },
+  {
+    icon: <FontAwesomeIcon icon={faFigma} />,
+    title: "figma",
   },
 ];
 

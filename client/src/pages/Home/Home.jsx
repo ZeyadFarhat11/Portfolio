@@ -30,15 +30,17 @@ function LandingSection() {
           <h1>
             Hi There! <span className="hand">👋🏻</span>
             <br />
-            I'M <span className="name">MAHMOUD ORABY</span>
+            I'M <span className="name">ZEYAD FARHAT</span>
           </h1>
           <TypeAnimation
             sequence={[
               "Freelancer",
               1000,
-              "Django Developer",
+              "MERN-Stack Developer",
               1000,
-              "Python Developer",
+              "Javascript Developer",
+              1000,
+              "Node Crawler",
               1000,
             ]}
             speed={1}

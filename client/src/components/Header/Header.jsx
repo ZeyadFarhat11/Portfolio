@@ -13,6 +13,7 @@ import "./header.scss";
 import { useEffect, useState } from "react";
 import data from "../../data.jsx";
 import { useLocation } from "react-router-dom";
+import logo from "../../assets/img/logo.svg";
 
 function Header() {
   const [menuActive, setMenuActive] = useState(false);
@@ -27,7 +28,9 @@ function Header() {
   return (
     <div className="header">
       <Container>
-        <div className="logo">MO.</div>
+        <Link className="logo">
+          <img src={logo} alt="logo" />
+        </Link>
         <div className={`menu ${menuActive ? "active" : ""}`}>
           <nav>
             <Link to="/">
