@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/comfysloth-shop/static/css/main.66a2e42a.css",
+    "main.js": "/comfysloth-shop/static/js/main.dc1c1f39.js",
+    "static/media/landing-lg.jpeg": "/comfysloth-shop/static/media/landing-lg.a876f19f6786a3aca992.jpeg",
+    "static/media/landing-sm.jpeg": "/comfysloth-shop/static/media/landing-sm.789918645915c8acb36f.jpeg",
+    "static/media/logo.svg": "/comfysloth-shop/static/media/logo.221f6b13e6eaaad5828372464f73a1a4.svg",
+    "static/media/services3.svg": "/comfysloth-shop/static/media/services3.4969891ecdca7f45fb3f3c0b09ddaf10.svg",
+    "static/media/services1.svg": "/comfysloth-shop/static/media/services1.2f5925bb6bd73e9698e23d97dd3b8b18.svg",
+    "static/media/services2.svg": "/comfysloth-shop/static/media/services2.4544f8d028e3bfdab40e1559b82a5b25.svg",
+    "index.html": "/comfysloth-shop/index.html",
+    "main.66a2e42a.css.map": "/comfysloth-shop/static/css/main.66a2e42a.css.map",
+    "main.dc1c1f39.js.map": "/comfysloth-shop/static/js/main.dc1c1f39.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.66a2e42a.css",
+    "static/js/main.dc1c1f39.js"
+  ]
+}

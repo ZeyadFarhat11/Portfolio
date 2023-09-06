@@ -21,12 +21,12 @@ function Projects() {
                 <p>{description}</p>
                 <div className="btns">
                   {!!github && (
-                    <a href={github} className="main-button">
+                    <a href={github} className="main-button" target="_blank">
                       <FontAwesomeIcon icon={faGithub} /> Github
                     </a>
                   )}
                   {!!demo && (
-                    <a href={github} className="main-button">
+                    <a href={demo} className="main-button" target="_blank">
                       <FontAwesomeIcon icon={faNewspaper} /> Demo
                     </a>
                   )}

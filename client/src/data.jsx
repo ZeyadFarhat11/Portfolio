@@ -1,5 +1,4 @@
 import mongodb from "./assets/img/skills/mongodb.svg";
-import postgres from "./assets/img/skills/postgres.svg";
 import postman from "./assets/img/skills/postman.svg";
 import vsc from "./assets/img/skills/vsc.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,15 +9,13 @@ import {
   faHtml5,
   faJsSquare,
   faNode,
-  faNodeJs,
-  faPython,
   faReact,
   faSass,
   faWindows,
 } from "@fortawesome/free-brands-svg-icons";
 import chatify from "./assets/img/projects/chatify.png";
 import bitsOfCode from "./assets/img/projects/bits-of-code.png";
-import project1 from "./assets/img/projects/chatify.png";
+import comfysloth from "./assets/img/projects/comfysloth.png";
 
 export default {
   social: {
@@ -96,12 +93,13 @@ export const tools = [
 
 export const projects = [
   {
-    image: chatify,
-    title: "Chatify",
+    image: comfysloth,
+    title: "Comfysloth",
     description:
-      "Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages.",
-    demo: "https://chatify-49.web.app/",
-    github: "https://github.com/soumyajit4419/Chatify",
+      "An online store that sells home furniture, through which you can buy an office, bedrooms, children’s rooms, etc. With a system to log in and save products in the cart",
+    technologies: ["react", "firebase", "sass"],
+    demo: "/comfysloth-shop",
+    github: "https://github.com/ZeyadFarhat11/react-ecommerce-shop",
   },
   {
     image: bitsOfCode,
