@@ -1,59 +1,57 @@
+import {
+  FaCss3,
+  FaFigma,
+  FaGitAlt,
+  FaGithub,
+  FaHtml5,
+  FaJsSquare,
+  FaNode,
+  FaReact,
+  FaSass,
+  FaWindows,
+} from "react-icons/fa";
+import comfysloth from "./assets/img/projects/comfysloth.png";
+import express from "./assets/img/skills/express.svg";
 import mongodb from "./assets/img/skills/mongodb.svg";
 import postman from "./assets/img/skills/postman.svg";
 import vsc from "./assets/img/skills/vsc.svg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCss3,
-  faFigma,
-  faGitAlt,
-  faHtml5,
-  faJsSquare,
-  faNode,
-  faReact,
-  faSass,
-  faWindows,
-} from "@fortawesome/free-brands-svg-icons";
-import chatify from "./assets/img/projects/chatify.png";
-import bitsOfCode from "./assets/img/projects/bits-of-code.png";
-import comfysloth from "./assets/img/projects/comfysloth.png";
 
 export default {
   social: {
-    github: "https://github.com/mahmoud-oraby",
-    twitter: "https://google.com",
+    github: "https://github.com/ZeyadFarhat11",
+    facebook: "https://www.facebook.com/zeyad113",
     linkedIn: "https://google.com",
-    instagram: "https://google.com",
   },
   copyrightMessages: [
     "Developed by Zeyad Farhat",
     "Copyright © 2023 Zeyad Farhat",
   ],
-  repoUrl: "https://google.com",
+  repoUrl: "https://github.com/ZeyadFarhat11/portfolio",
 };
 
 export const skills = [
   {
-    icon: <FontAwesomeIcon icon={faHtml5} />,
+    icon: <FaHtml5 />,
     title: "html5",
   },
   {
-    icon: <FontAwesomeIcon icon={faCss3} />,
+    icon: <FaCss3 />,
     title: "css3",
   },
   {
-    icon: <FontAwesomeIcon icon={faSass} />,
+    icon: <FaSass />,
     title: "sass",
   },
   {
-    icon: <FontAwesomeIcon icon={faJsSquare} />,
+    icon: <FaJsSquare />,
     title: "javascript",
   },
   {
-    icon: <FontAwesomeIcon icon={faReact} />,
+    icon: <FaReact />,
     title: "react",
   },
   {
-    icon: <FontAwesomeIcon icon={faNode} />,
+    icon: <FaNode />,
     title: "nodejs",
   },
   {
@@ -63,14 +61,20 @@ export const skills = [
     style: { height: "70px" },
   },
   {
-    icon: <FontAwesomeIcon icon={faGitAlt} />,
+    icon: express,
+    title: "express",
+    type: "img",
+    style: { height: "50px" },
+  },
+  {
+    icon: <FaGitAlt />,
     title: "git",
   },
 ];
 
 export const tools = [
   {
-    icon: <FontAwesomeIcon icon={faWindows} />,
+    icon: <FaWindows />,
     title: "windows",
   },
   {
@@ -86,8 +90,12 @@ export const tools = [
     style: { height: "65px" },
   },
   {
-    icon: <FontAwesomeIcon icon={faFigma} />,
+    icon: <FaFigma />,
     title: "figma",
+  },
+  {
+    icon: <FaGithub />,
+    title: "github",
   },
 ];
 
@@ -96,49 +104,9 @@ export const projects = [
     image: comfysloth,
     title: "Comfysloth",
     description:
-      "An online store that sells home furniture, through which you can buy an office, bedrooms, children’s rooms, etc. With a system to log in and save products in the cart",
+      "An online store that sells home furniture, through which you can buy an office, bedrooms, children’s rooms, etc. With a system to log in and save products in the cart.",
     technologies: ["react", "firebase", "sass"],
     demo: "/comfysloth-shop",
     github: "https://github.com/ZeyadFarhat11/react-ecommerce-shop",
-  },
-  {
-    image: bitsOfCode,
-    title: "Bits-0f-C0de",
-    description:
-      "My personal blog page build with Next.js and Tailwind Css which takes the content from markdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown.",
-    demo: "https://blogs.soumya-jit.tech/",
-    github: "https://github.com/soumyajit4419/Bits-0f-C0de",
-  },
-  {
-    image: chatify,
-    title: "Chatify",
-    description:
-      "Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages.",
-    demo: "https://chatify-49.web.app/",
-    github: "https://github.com/soumyajit4419/Chatify",
-  },
-  {
-    image: bitsOfCode,
-    title: "Bits-0f-C0de",
-    description:
-      "My personal blog page build with Next.js and Tailwind Css which takes the content from markdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown.",
-    demo: "https://blogs.soumya-jit.tech/",
-    github: "https://github.com/soumyajit4419/Bits-0f-C0de",
-  },
-  {
-    image: chatify,
-    title: "Chatify",
-    description:
-      "Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages.",
-    demo: "https://chatify-49.web.app/",
-    github: "https://github.com/soumyajit4419/Chatify",
-  },
-  {
-    image: bitsOfCode,
-    title: "Bits-0f-C0de",
-    description:
-      "My personal blog page build with Next.js and Tailwind Css which takes the content from markdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown.",
-    demo: "https://blogs.soumya-jit.tech/",
-    github: "https://github.com/soumyajit4419/Bits-0f-C0de",
   },
 ];

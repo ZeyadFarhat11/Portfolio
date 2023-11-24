@@ -1,58 +1,105 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import "./star-canvas.scss";
 
 const StarCanvas = () => {
   const canvasRef = useRef(null);
-  const [canvasWidth, setCanvasWidth] = useState(window.innerWidth);
+  const screenH = useRef(window.innerHeight);
+  const screenW = useRef(window.innerWidth);
+  const stars = useRef([]);
+  const numStars = 500;
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const ctx = canvas.getContext("2d");
-    let stars = [];
-    const { width, height } = canvas;
+    const context = canvas.getContext("2d");
 
-    const createStars = () => {
-      const numStars = 150;
+    const createStar = () => {
+      const x = Math.round(Math.random() * screenW.current);
+      const y = Math.round(Math.random() * screenH.current);
+      const length = 1 + Math.random() * 2;
+      const opacity = Math.random();
 
-      for (let i = 0; i < numStars; i++) {
-        const x = Math.random() * width;
-        const y = Math.random() * height;
-        stars.push({ x, y, opacity: 1, direction: -1 });
+      return {
+        x,
+        y,
+        length,
+        opacity,
+        factor: 1,
+        increment: Math.random() * 0.03,
+      };
+    };
+
+    const animate = () => {
+      context.clearRect(0, 0, screenW.current, screenH.current);
+
+      stars.current.forEach((star) => {
+        drawStar(star);
+      });
+
+      requestAnimationFrame(animate);
+    };
+
+    const drawStar = (star) => {
+      context.rotate((Math.PI * 1) / 10);
+
+      context.save();
+      context.translate(star.x, star.y);
+
+      if (star.opacity > 1) {
+        star.factor = -1;
+      } else if (star.opacity <= 0) {
+        star.factor = 1;
+        star.x = Math.round(Math.random() * screenW.current);
+        star.y = Math.round(Math.random() * screenH.current);
       }
-    };
 
-    const drawStars = () => {
-      for (let i = 0; i < stars.length; i++) {
-        const star = stars[i];
-        const starSize = Math.random() * (2 - 0.5) + 0.5;
+      star.opacity += star.increment * star.factor;
 
-        ctx.beginPath();
-        ctx.fillStyle = `rgba(255, 255, 255, 1)`;
-        ctx.fillRect(star.x, star.y, starSize, starSize);
-        ctx.closePath();
+      context.beginPath();
+      for (let i = 5; i--; ) {
+        context.lineTo(0, star.length);
+        context.translate(0, star.length);
+        context.rotate((Math.PI * 2) / 10);
+        context.lineTo(0, -star.length);
+        context.translate(0, -star.length);
+        context.rotate(-((Math.PI * 6) / 10));
       }
+      context.lineTo(0, star.length);
+      context.closePath();
+      context.fillStyle = `rgba(160, 160, 160, ${star.opacity})`;
+      context.shadowBlur = 5;
+      context.shadowColor = "#ffff33";
+      context.fill();
+
+      context.restore();
     };
 
-    createStars();
-    drawStars();
-  }, [canvasWidth]);
+    screenH.current = window.innerHeight;
+    screenW.current = window.innerWidth;
 
-  useEffect(() => {
-    const resizeCanvas = () => {
-      setCanvasWidth(window.innerWidth);
+    window.onresize = () => {
+      screenH.current = window.innerHeight;
+      screenW.current = window.innerWidth;
+
+      canvas.height = screenH.current;
+      canvas.width = screenW.current;
     };
-    window.addEventListener("resize", resizeCanvas);
-    return () => window.removeEventListener("resize", resizeCanvas);
+
+    canvas.height = screenH.current;
+    canvas.width = screenW.current;
+
+    for (let i = 0; i < numStars; i++) {
+      const star = createStar();
+      stars.current.push(star);
+    }
+
+    animate();
+
+    return () => {
+      window.onresize = null;
+    };
   }, []);
 
-  return (
-    <canvas
-      ref={canvasRef}
-      width={canvasWidth}
-      height={window.innerHeight}
-      className="star-canvas"
-    />
-  );
+  return <canvas ref={canvasRef} id="space" />;
 };
 
 export default StarCanvas;

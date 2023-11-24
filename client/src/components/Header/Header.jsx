@@ -1,22 +1,20 @@
 import {
-  faCodeFork,
-  faHome,
-  faLaptopCode,
-  faNewspaper,
-  faStar,
-  faUser,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import "./header.scss";
+  FaHome,
+  FaLaptopCode,
+  FaNewspaper,
+  FaStar,
+  FaUser,
+} from "react-icons/fa";
+import { GoRepoForked } from "react-icons/go";
 import { useEffect, useState } from "react";
-import data from "../../data.jsx";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/img/logo.svg";
+import data from "../../data.jsx";
+import "./header.scss";
 
 function Header() {
   const [menuActive, setMenuActive] = useState(false);
+  const [blur, setBlur] = useState(false);
 
   const location = useLocation();
 
@@ -25,34 +23,47 @@ function Header() {
     window.scrollTo(0, 0);
   }, [location]);
 
+  useEffect(() => {
+    const listener = () => {
+      if (scrollY >= 150) {
+        setBlur(true);
+      } else {
+        setBlur(false);
+      }
+    };
+    window.addEventListener("scroll", listener);
+
+    return () => window.removeEventListener("scroll", listener);
+  }, [setBlur]);
+
   return (
-    <div className="header">
-      <Container>
+    <div className={`header ${blur ? "blured" : ""}`}>
+      <div className="container">
         <Link className="logo">
           <img src={logo} alt="logo" />
         </Link>
         <div className={`menu ${menuActive ? "active" : ""}`}>
           <nav>
             <Link to="/">
-              <FontAwesomeIcon icon={faHome} />
+              <FaHome />
               <span>Home</span>
             </Link>
             <Link to="/about">
-              <FontAwesomeIcon icon={faUser} />
+              <FaUser />
               <span>About</span>
             </Link>
             <Link to="/projects">
-              <FontAwesomeIcon icon={faLaptopCode} />
+              <FaLaptopCode />
               <span>Projects</span>
             </Link>
             <Link to="/resume">
-              <FontAwesomeIcon icon={faNewspaper} />
+              <FaNewspaper />
               <span>Resume</span>
             </Link>
           </nav>
           <a href={data.repoUrl} target="_blank" className="repo-button">
-            <FontAwesomeIcon icon={faCodeFork} />
-            <FontAwesomeIcon icon={faStar} />
+            <GoRepoForked />
+            <FaStar />
           </a>
         </div>
         <button
@@ -63,7 +74,7 @@ function Header() {
           <span></span>
           <span></span>
         </button>
-      </Container>
+      </div>
     </div>
   );
 }

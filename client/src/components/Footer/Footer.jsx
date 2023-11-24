@@ -1,35 +1,28 @@
-import "./footer.scss";
+import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import data from "../../data.jsx";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithub,
-  faInstagram,
-  faLinkedin,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
-import { Container } from "react-bootstrap";
+import "./footer.scss";
 function Footer() {
   return (
     <footer className="footer">
-      <Container>
+      <div className="container">
         {data.copyrightMessages.map((msg, i) => (
           <p key={i}>{msg}</p>
         ))}
         <div className="social">
           <a href={data.social.github}>
-            <FontAwesomeIcon icon={faGithub} />
+            <FaGithub />
           </a>
           <a href={data.social.twitter}>
-            <FontAwesomeIcon icon={faTwitter} />
+            <FaTwitter />
           </a>
           <a href={data.social.linkedIn}>
-            <FontAwesomeIcon icon={faLinkedin} />
+            <FaLinkedin />
           </a>
           <a href={data.social.instagram}>
-            <FontAwesomeIcon icon={faInstagram} />
+            <FaInstagram />
           </a>
         </div>
-      </Container>
+      </div>
     </footer>
   );
 }

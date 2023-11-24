@@ -1,17 +1,19 @@
-import { TypeAnimation } from "react-type-animation";
-import "./home.scss";
-import landingImg from "../../assets/img/landing.svg";
-import data from "../../data.jsx";
+import { BiCloudDownload } from "react-icons/bi";
+import {
+  FaFacebook,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+} from "react-icons/fa";
+import { LiaAngleRightSolid } from "react-icons/lia";
 import { Tilt } from "react-tilt";
 import avatar from "../../assets/img/home-avatar.svg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithub,
-  faInstagram,
-  faLinkedin,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
-import { Container } from "react-bootstrap";
+import landingImg from "../../assets/img/landing.svg";
+import data from "../../data.jsx";
+import "./home.scss";
+import TextTyping from "../../components/TextTyping.jsx";
+import resume from "../../assets/resume.pdf";
 export default function Home() {
   return (
     <main id="home">
@@ -25,41 +27,28 @@ export default function Home() {
 function LandingSection() {
   return (
     <section className="landing">
-      <Container>
+      <div className="container">
         <div className="text">
           <h1>
             Hi There! <span className="hand">👋🏻</span>
             <br />
             I'M <span className="name">ZEYAD FARHAT</span>
           </h1>
-          <TypeAnimation
-            sequence={[
-              "Freelancer",
-              1000,
-              "MERN-Stack Developer",
-              1000,
-              "Javascript Developer",
-              1000,
-              "Node Crawler",
-              1000,
-            ]}
-            speed={1}
-            wrapper="h3"
-            cursor={true}
-            repeat={Infinity}
-            style={{
-              fontSize: "40px",
-              fontWeight: "bold",
-              marginTop: "20px",
-              color: "#cd5ff8",
-              display: "inline-block",
-            }}
-          />
+          <TextTyping sequance={["MERN-Stack Developer", "Node Crawler"]} />
+          <div className="btns">
+            <button>
+              Let's Work Together <LiaAngleRightSolid />
+              <LiaAngleRightSolid />
+            </button>
+            <a target="_blank" href={resume}>
+              Download Resume <BiCloudDownload />
+            </a>
+          </div>
         </div>
         <div className="img">
           <img src={landingImg} alt="Landing Image" />
         </div>
-      </Container>
+      </div>
     </section>
   );
 }
@@ -67,7 +56,7 @@ function LandingSection() {
 function IntroduceSection() {
   return (
     <section className="introduce">
-      <Container>
+      <div className="container">
         <div className="text">
           <h2 className="main-title">
             let me <span>introduce</span> myself
@@ -96,7 +85,7 @@ function IntroduceSection() {
             <img src={avatar} alt="avatar" />
           </Tilt>
         </div>
-      </Container>
+      </div>
     </section>
   );
 }
@@ -104,26 +93,23 @@ function IntroduceSection() {
 function SocialSection() {
   return (
     <section className="social">
-      <Container>
+      <div className="container">
         <h2>find me on</h2>
         <p>
           Feel free to <span className="main-color">connect</span> with me
         </p>
         <div className="platforms">
           <a href={data.social.github} target="_blank">
-            <FontAwesomeIcon icon={faGithub} color="#222" />
+            <FaGithub color="#222" />
           </a>
-          <a href={data.social.twitter} target="_blank">
-            <FontAwesomeIcon icon={faTwitter} color="#1DA1F2" />
+          <a href={data.social.facebook} target="_blank">
+            <FaFacebook color="#316FF6" />
           </a>
           <a href={data.social.linkedIn} target="_blank">
-            <FontAwesomeIcon icon={faLinkedin} color="#0A66C2" />
-          </a>
-          <a href={data.social.instagram} target="_blank">
-            <FontAwesomeIcon icon={faInstagram} color="#C13584" />
+            <FaLinkedin color="#0A66C2" />
           </a>
         </div>
-      </Container>
+      </div>
     </section>
   );
 }
